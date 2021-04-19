@@ -1,0 +1,76 @@
+%{
+#include <stdio.h>
+#include <math.h>
+/* Para extraer Prototipos de Función y Estructura de Complejo */
+#include <string.h>
+struct complejo {
+  double real, img;
+};
+
+typedef struct complejo Complejo;
+typedef struct complejo *ComplejoAP;
+
+/*  prototypes of the provided functions */ 
+Complejo *creaComplejo(int real, int img);
+Complejo *Complejo_add(Complejo *, Complejo *);
+Complejo *Complejo_sub(Complejo *, Complejo *);
+Complejo *Complejo_mul(Complejo *, Complejo *);
+Complejo *Complejo_div(Complejo *, Complejo *);
+void imprimirC(Complejo *c);
+
+/*  prototypes of the provided functions */ 
+/* define the return type of FLEX */
+#define YYSTYPE ComplejoAP
+
+/* Tipo de Pila de Yacc */
+#define YYSTYPE ComplejoAP
+
+/* De Hoc1 */
+void yyerror (char *s);
+int yylex ();
+void warning(char *s, char *t);
+/*De Hoc1 */
+%}
+
+%token CNUMBER
+%left '+' '-'
+%left '*' '/'
+
+%% 
+
+list:   
+	| list'\n'
+        | list exp '\n'  { imprimirC($2); }
+	;
+exp:    CNUMBER           { $$ = $1;  }
+        | exp '+' exp     { $$ = Complejo_add($1,$3);  }
+        | exp '-' exp     { $$ = Complejo_sub($1,$3);  }
+        | exp '*' exp     { $$ = Complejo_mul($1,$3);  }
+        | exp '/' exp     { $$ = Complejo_div($1,$3);  }
+        | '(' exp ')'     { $$ = $2;}
+	;
+
+%%
+//De Hoc 1
+#include <stdio.h>
+#include <ctype.h>
+char *progname;
+int lineno = 1;
+
+void main (int argc, char *argv[]){
+	progname=argv[0];
+  	yyparse ();
+}
+void yyerror (char *s) {
+	warning(s, (char *) 0);
+}
+void warning(char *s, char *t){
+	fprintf (stderr, "%s: %s", progname, s);
+	if(t)
+		fprintf (stderr, " %s", t);
+	fprintf (stderr, "cerca de la linea %d\n", lineno);
+}
+
+
+
+
