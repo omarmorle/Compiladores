@@ -1,0 +1,18 @@
+Coche:
+rectangulo 50 10 100 50
+rectangulo 50 60 250 70
+circulo 75 110 70
+circulo 220 110 70
+
+Persona:
+circulo 200 50 80
+line 240 130 240 300
+line  100 150 380 150
+line  240 300 140 400
+line  240 300 340 400
+
+Casa:
+rectangulo 150 150 300 300
+rectangulo 350 300 70 150
+line 75 225 300 0
+line 300 0 525 225
