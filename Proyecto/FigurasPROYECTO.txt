@@ -53,80 +53,6 @@ for(i = 0; i < 10; i = i + 1)
 	Girar[36];
 }
 
-///Logo escom///
-CambiarColor[238,238,238];
-Girar[90];
-Avanzar[25];
-CambiarColor[1,103,153];
-Girar[90];
-Avanzar[150];
-Girar[180];
-Avanzar[300];
-Girar[180];
-Avanzar[150];
-CambiarColor[238,238,238];
-Girar[90];
-Avanzar[25];
-Girar[90];
-CambiarColor[1,103,153];
-Avanzar [100];
-Girar[180];
-Avanzar[200];
-Girar[45];
-Avanzar[100];
-Girar[25];
-Avanzar[25];
-Girar[25];
-Avanzar[25];
-Girar[25];
-Avanzar[25];
-Girar[25];
-Avanzar[100];
-Girar[35];
-Avanzar[200];
-Girar[45];
-Avanzar[100];
-Girar[25];
-Avanzar[25];
-Girar[25];
-Avanzar[25];
-Girar[25];
-Avanzar[25];
-Girar[25];
-Avanzar[100];
-Girar[35];
-Avanzar[100];
-Girar[45];
-Avanzar[130];
-Girar[90];
-Avanzar[100];
-Girar[90];
-Avanzar[100];
-Girar[90];
-Avanzar[50];
-Girar[90];
-Avanzar[75];
-Girar[90];
-Avanzar[50];
-Girar[90];
-Avanzar[75];
-Girar[90];
-Avanzar[50];
-Girar[270];
-Avanzar[25];
-Girar[270];
-Avanzar[100];
-Girar[270];
-Avanzar[125];
-CambiarColor[238,238,238];
-Girar[45];
-Avanzar[25];
-CambiarColor[1,103,153];
-Girar[90];
-Avanzar[150];
-Girar[180];
-Avanzar[300];
-
 ///LABERINTO///
 for(i=10;i<140;i=i+10){
    Avanzar[i];
@@ -179,28 +105,6 @@ Girar[144];
 Avanzar[200];
 Girar[144];
 Avanzar[200];
-
-///ARBOL KAWUAI///
-func arbol() {
-    if($1>0){
-  	Girar[$2];
- 	Avanzar[$1-10];
- 	Girar[180];
- 	Avanzar[$1-10];
-	Girar[90];
-	Avanzar[$1-10];
-	Girar[180];
- 	Avanzar[$1-10];
-	Girar[270];
-	Avanzar[$1-10];
-	arbol($1-10,25);
-    }
-    return 0;
-}
-
-Girar[90];
-Avanzar[50];
-arbol(50,25);
 
 ///ARBOL///
 func arbol(){
@@ -309,11 +213,76 @@ Avanzar[50];
 Girar[270];
 Avanzar[50];
 
-
-
-
-
-
-
-
-
+///Logo escom///
+CambiarColor[238,238,238];
+Girar[90];
+Avanzar[25];
+CambiarColor[1,103,153];
+Girar[90];
+Avanzar[150];
+Girar[180];
+Avanzar[300];
+Girar[180];
+Avanzar[150];
+CambiarColor[238,238,238];
+Girar[90];
+Avanzar[25];
+Girar[90];
+CambiarColor[1,103,153];
+Avanzar [100];
+Girar[180];
+Avanzar[200];
+Girar[45];
+Avanzar[100];
+Girar[25];
+Avanzar[25];
+Girar[25];
+Avanzar[25];
+Girar[25];
+Avanzar[25];
+Girar[25];
+Avanzar[100];
+Girar[35];
+Avanzar[200];
+Girar[45];
+Avanzar[100];
+Girar[25];
+Avanzar[25];
+Girar[25];
+Avanzar[25];
+Girar[25];
+Avanzar[25];
+Girar[25];
+Avanzar[100];
+Girar[35];
+Avanzar[100];
+Girar[45];
+Avanzar[130];
+Girar[90];
+Avanzar[100];
+Girar[90];
+Avanzar[100];
+Girar[90];
+Avanzar[50];
+Girar[90];
+Avanzar[75];
+Girar[90];
+Avanzar[50];
+Girar[90];
+Avanzar[75];
+Girar[90];
+Avanzar[50];
+Girar[270];
+Avanzar[25];
+Girar[270];
+Avanzar[100];
+Girar[270];
+Avanzar[125];
+CambiarColor[238,238,238];
+Girar[45];
+Avanzar[25];
+CambiarColor[1,103,153];
+Girar[90];
+Avanzar[150];
+Girar[180];
+Avanzar[300];
